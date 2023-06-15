@@ -1,0 +1,119 @@
+/* Styles for the add button */
+.add-button {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	color: #fff;
+	background-color: #007bff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+
+/*
+   Styles for the modal
+   The modal is a pop-up dialog that appears on top of the content.
+   It is initially hidden (display: none) and becomes visible when its corresponding
+   modal element has the "open" class.
+*/
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* The "open" class makes the modal visible */
+.modal.open {
+	display: block;
+}
+
+/*
+   Styles for the modal content
+   The modal content refers to the container inside the modal element that holds the actual content.
+   It has a specific width, padding, border, and background color.
+*/
+.modal-content {
+	background-color: #f2f2f2;
+	margin: 10% auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	width: 400px;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the heading inside the modal content */
+.modal-content h2 {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+/* Styles for form groups */
+.form-group {
+	margin-bottom: 15px;
+}
+
+/* Styles for form group labels */
+.form-group label {
+	display: block;
+	font-weight: bold;
+}
+
+/*
+   Styles for form inputs
+   These styles apply to text and number inputs inside form groups.
+*/
+.form-group input[type="text"],
+.form-group input[type="number"] {
+	width: 95%;
+	padding: 8px;
+	font-size: 14px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+/*
+   Styles for form buttons
+   These styles apply to submit and button inputs inside form groups.
+*/
+.form-group button[type="submit"],
+.form-group button[type="button"] {
+	width: 45%;
+	padding: 10px;
+	font-size: 16px;
+	color: #fff;
+	background-color: #007bff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/*
+   Hover styles for buttons
+   When hovering over the submit and button inputs, or the add button,
+   their background color changes to a darker shade of blue.
+*/
+.form-group button[type="submit"]:hover,
+.form-group button[type="button"]:hover,
+.add-button:hover {
+	background-color: #0056b3;
+}
+
+/*
+   Styles for the delete button
+*/
+.delete-button {
+	background: none;
+	border: none;
+	cursor: pointer;
+}

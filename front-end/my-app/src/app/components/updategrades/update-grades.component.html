@@ -1,0 +1,12 @@
+<input
+  type="number"
+  [(ngModel)]="student[subject]"
+  (input)="handleInput()"
+  (keyup.enter)="onGradeUpdate()"
+  (blur)="onGradeUpdate()"
+  style="width: 100%;"
+  min="1" 
+  max="6"
+>
+
+  

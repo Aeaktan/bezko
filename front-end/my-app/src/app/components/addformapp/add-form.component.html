@@ -1,0 +1,77 @@
+<button class="add-button" (click)="openAddStudentForm()">Add student</button> <!-- Button to add a new student, triggers the "openAddStudentForm()" function -->
+<div class="modal" [ngClass]="{ open: showAddStudentForm }"> <!-- Modal container, visibility controlled by "showAddStudentForm" variable -->
+  <div class="modal-content"> <!-- Content container of the modal dialog -->
+    <h2>Add Student</h2>
+    <form (submit)="addStudent()"> <!-- Form for adding a new student, triggers the "addStudent()" function on submission -->
+      <div class="form-group">
+        <label for="id">ID</label> <!-- Label for the ID input field -->
+
+        <!-- Binds the ID input value to the "newStudent.id" property -->
+        <input
+          type="text"
+          id="id"
+          name="id"
+          [(ngModel)]="newStudent.id"
+          placeholder="ID"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="imie">Name</label> <!-- Label for the Name input field -->
+
+        <!-- Binds the Name input value to the "newStudent.name" property -->
+        <input
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="newStudent.name"
+          placeholder="Name"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="math">Mathematics</label> <!-- Label for the Mathematics input field -->
+
+        <!-- Binds the Mathematics input value to the "newStudent.math" property -->
+        <input
+          type="number"
+          id="math"
+          name="math"
+          [(ngModel)]="newStudent.math"
+          placeholder="Mathematics"
+          required
+        />
+      </div>
+      <div class="form-group"> 
+        <label for="history">History</label> <!-- Label for the History input field -->
+
+        <!-- Binds the History input value to the "newStudent.history" property -->
+        <input
+          type="number"
+          id="history"
+          name="history"
+          [(ngModel)]="newStudent.history"
+          placeholder="History"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="wf">WF</label> <!-- Label for the WF input field -->
+
+        <!-- Binds the WF input value to the "newStudent.wf" property -->
+        <input
+          type="number"
+          id="wf"
+          name="wf"
+          [(ngModel)]="newStudent.wf"
+          placeholder="WF"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <button type="submit">Add</button> <!-- Submit button to add the student -->
+        <button type="button" (click)="closeAddStudentForm()">Cancel</button> <!-- Button to close the modal, triggers the "closeAddStudentForm()" function -->
+      </div>
+    </form>
+  </div>
+</div>
